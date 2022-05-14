@@ -1,0 +1,86 @@
+﻿Fast track python assignment_6
+1.Explain why selenium is important in web scraping?
+Ans. Selenium is an automation testing framework for web applications/websites which can also control the browser to navigate the website just like a human. Selenium uses a web-driver package that can take control of the browser and mimic user-oriented actions to trigger desired events. This guide will explain the process of building a web scraping program that will scrapedata and download files from Google Shopping Insights.SetupSelenium: To download selenium package, execute the below pip command in terminal: Pip install selenium Python Selenium Drivers: Web drivers enable python to control the browser via OS-level interactions. Web drivers use the browser's built-in support for the automation process so, in order to control the browser, the web-driver must be installed and should be accessible via the PATHvariable of the operating system (only required in case of manual installation). Download the drivers from official site for Chrome, Firefox, and Edge. Opera drivers can also bedownloaded from the Opera Chromium project hosted on Github.Data Extraction Let's get started by searching a product and downloading the CSV file(s) with the following steps:
+Import Dependencies and Create Driver Instance: The initial step is to create an object of webdriver for particular browser by importing it from selenium module as: From selenium import webdriver #Import module From selenium.webdriver.common.keys import Keys # For keyboard keys Import URL = "https://shopping.thinkwithgoogle.com' # Define URL Browser = webdriver.Safaril) Pythontime# Waiting function# Create driver object means open the browserBy default, the automation control is disabled in safari and it needs to be enabled forautomation environment otherwise it will raise Session NotCreatedException. So, enable the Develop option under the advanced settings in Safari preferences
+
+2. What's the difference between scraping images and scraping websites? Use an example to demonstrate your point. Ans:. What is image scraping? Image scraping is a subset of the web scraping technology. While web scraping deals with all forms ofweb data extraction, image scraping only focuses on the media side - images, videos, audio, and so on. How is image scraping done? While there are several tools and techniques available to extract images from websites, we'll take a lookat two solutions provided by Grepsr - Grepsr Concierge and Grepsr Browser Extensions – in thisarticle.Via Grepsr ConciergeGrepsr's Concierge service is the perfect solution for bulk image extraction requirements - such asmultiple image URLS for an item, or extracting images as JPG or PNG files, compressing them into zip files, applying a certain file naming format and so on.Once we receive your project details, our team of expert engineers get to work setting up the project tailored specifically to your requirements.Imper
+What is web scraping
+Web scraping is the process of using bots to extract content and data from a website. Unlike screen scraping, which only copies pixels displayed onscreen, web scraping extracts underlying HTML cOde and, with it, data stored in a database. The scraper can then replicate entire website content elsewhere.
+Web scraping is used in a variety of digital businesses that rely on data harvesting. Legitimate use casesinclude:
+Search engine bots crawling a site, analyzing its content and then ranking it.Price comparison sites deploying bots to auto-fetch prices and product descriptions for allied seller websites.
+
+Market research companies using scrapers to pull data from forums and social media (e.g., for sentiment analysis).
+
+Web scraping is also used for illegal purposes, including the undercutting of prices and the theft of copyrighted content. An online entity targeted by a scraper can suffer severe financial losses, especially
+
+if it's a business strongly relying on competitive pricing models or deals in content distribution.
+
+Scraper tools and bots
+
+Web scraping tools are software (i.e., bots) programmed to sift through databases and extract information. A variety of bot types are used, many being fully customizable to:
+
+Recognize unique HTML site structures
+
+3.
+
+Explain how MongoDB indexes data.?
+
+Ans: Indexes support the efficient execution of queries in MongoDB. Without indexes, MongoDB must perform a collection scan, i.e. scan every document in a collection, to select those documents that match the query statement. If an appropriate index exists for a query, MongoDB can use the index to limit the number of documents it must inspect. Indexes are special data structures (1] that store a small portion of the collection's data set in an easy to traverse form. The index stores the value of a specific field or set of fields, ordered by the value of the field. The ordering of the index
+
+entries supports efficient equality matches and range-based query operations. In addition, Names The default name for an index is the concatenation of the indexed keys and each key's direction in the index ( i.e. 1 or-1) using underscores as a separator. For example, an index created on {item :1, quantity: -1 } has the name item 1_quantity_-1.You can create indexes with a custom
+
+name, such as one that is more human-readable than the default. For example, consider an
+
+application that frequently queries the products collection to populate data on existing inventory.
+
+The following createlndex() method creates an index on item and quantity named query for
+
+inventory:.products.createlndex {item: 1, quantity: -1 }, { name: "query for inventory" }You can view index names using the db.collection.getindexes() method. You cannot rename an index once
+
+created. Instead, you must drop and re-create the index with a new name.Index TypesMongoDB
+
+provides a number of different index types to support specific types of data and queries. Single Field In addition to the MongoDB-defined_id index, MongoDB supports the creation of user-defined
+
+ascending/descending indexes on a single field of a document. Multikey Index MongoDB uses
+
+multikey indexes to index the content stored in arrays. If you index a field that holds an array value, MongoDB creates separate index entries for every element of the array. These multikey indexes allow queries to select documents that contain arrays by matching on element or elements of the arrays. MongoDB automaticaly determines whether to create a multikey index if the indexed field
+
+contains an array value; you do not need to explicitly specify the multikey type.
+
+4.
+
+What is the significance of the SET modifier?
+
+Ans:. Set modifiers
+
+Set expressions are used to define the scope of a calculation. The central part of the set expression is the set modifier that specifies a selection. This is used to modify the user selection, or the selection in the set identifier, and the result defines a new scope for the calculation.
+
+The set modifier consists of one or more field names, each followed by a selection that should be made on the field. The modifier is enclosed by angled brackets: <>
+
+For example:
+
+Sum ( {$eYear = (2015]>} Sales )
+
+Count ( {1<Country = {(Germany}>} distinct OrderiD )
+
+Sum ({S<Year = (2015), Country = {Germany}>} Sales )
+
+Element sets
+
+An element set can be defined using the following A list of values A search A reference to another field A set function
+
+If the element set definition is omitted, the set modifier will clear any selection in this field. For
+
+example: Sum( {$<Year = >} Sales ) Examples: Chart expressions for set modifiers based on element sets Examples - chart expressions
+
+Listed values The most common example of an element set is one that is based on a list of field values enclosed in curly brackets. For example: ($<Country= {Canada, Germany, Singapore}>)
+
+{$eYear = (2015, 2016}>) The inner curly brackets define the element set. The individual values are separated by commas.
+
+Quotes and case sensitivity
+
+If the values contain blanks or special characters, the values need to be quoted. Single quotes will be
+
+a literal, case-sensitive match witha single field value. Double quotes imply a case-insensitive match
+
+with one or several field values. For example: <Country = ('New Zealand'}> Matches New Zealand only. <Country= ("New Zealand"}> Matches New Zealand, NEW ZEALAND Dates must be enclosed in quotes and use the date format of the field in question. Double quotes can be substituted by square brackets or by grave accents.
